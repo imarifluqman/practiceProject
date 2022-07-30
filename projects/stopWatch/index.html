@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,30 @@
     <title>Stop Watch</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Stop Watch</h1>
+    <div class="stopWatch">
+        <div>
+            <h2>Hour</h2>
+            <h2 id="hours">00</h2>
+        </div>
+        <div>
+            <h2>Min</h2>
+            <h2 id="min">00</h2>
+        </div>
+        <div>
+            <h2>Sec</h2>
+            <h2 id="sec">00</h2>
+        </div>
+    </div>
+    <div class="btns">
+        <button id="start" onclick="startTime(this)">Start</button>
+        <button onclick="pauseTimer()">Pause</button>
+        <button onclick="restartTimer()">Restart</button>
+    </div>
+
+    <script src="app.js"></script>
 </body>
+
 </html>
