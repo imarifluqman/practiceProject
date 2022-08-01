@@ -14,6 +14,29 @@ h1 {
   padding: 10px;
   text-align: center;
 }
+#currentTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+#currentTime #day {
+  background-color: darkgoldenrod;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+#currentTime #date {
+  background-color: rgb(253, 183, 6);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+#currentTime #time {
+  background-color: rgb(226, 194, 113);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 .stopWatch {
   background-color: darkgray;
   width: 300px;
@@ -28,6 +51,12 @@ h1 {
 .stopWatch div {
   text-align: center;
 }
+.stopWatch div:nth-child(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 0 20px;
+}
+
 .btns {
   text-align: center;
 }
@@ -39,6 +68,7 @@ h1 {
   cursor: pointer;
   font-size: 10px;
   transition: 0.4s ease-in-out;
+  border-radius: 3px;
 }
 .btns button:hover {
   background-color: rgb(140, 140, 140);
