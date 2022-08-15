@@ -11,6 +11,40 @@
 
 <body>
     <h1>Timer</h1>
+
+    <p class="selectTime">Select Time</p>
+    <div class="timerBox">
+        <fieldset>
+            <legend>Hour</legend>
+            <input id="hour" type="number" placeholder="Enter Hour" max="99" value="00">
+        </fieldset>
+        <fieldset>
+            <legend>Min</legend>
+            <input id="minute" type="number" placeholder="Enter Minute" max="60" value="00">
+        </fieldset>
+        <fieldset>
+            <legend>Sec</legend>
+            <input id="sec" type="number" placeholder="Enter Second" max="60" value="00">
+        </fieldset>
+    </div>
+
+
+    <div class="btn">
+        <button id="start" onclick="starttimer(this)">Start</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <div class="showTime">
+        <p id="showhour">00</p>
+        <p id="showmin">00</p>
+        <p id="showsec">00</p>
+    </div>
+
+    <div>
+        <p id="timeOver"></p>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
