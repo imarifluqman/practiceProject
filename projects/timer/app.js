@@ -14,14 +14,15 @@ let showmin = document.querySelector("#showmin");
 let showsec = document.querySelector("#showsec");
 
 function setValue() {
-  if (m < 0 && s < 0 && h < 0) {
+  if (h != 0 && m != 0 && s != 0) {
+    s--;
+    timeOver.innerHTML = "";
+  } else {
     clearInterval(interval);
     start.removeAttribute("disabled");
-    h = 0;
-    m = 0;
-    s = 0;
+    timeOver.innerHTML = "Time is Over";
   }
-  s--;
+
   if (s === 0) {
     m--;
     s = 60;
@@ -30,23 +31,24 @@ function setValue() {
     h--;
     m = 60;
   }
-  if (s === 0 && m === 0 && h === 0) {
-    clearInterval(interval);
-    start.removeAttribute("disabled");
-    timeOver.innerHTML = "Time is Over";
-  }
+
   showhour.innerHTML = h;
   showmin.innerHTML = m;
   showsec.innerHTML = s;
 }
 
 function starttimer(e) {
-  e.setAttribute("disabled", "disabled");
-  h = hour.value;
-  m = minute.value;
-  s = sec.value;
-
-  interval = setInterval(setValue, 1000);
+  if (hour.value == 0 && minute.value == 0 && sec.value == 0) {
+    clearInterval(interval);
+    start.removeAttribute("disabled");
+    timeOver.innerHTML = "Plese set time";
+  } else {
+    e.setAttribute("disabled", "disabled");
+    h = hour.value;
+    m = minute.value;
+    s = sec.value;
+    interval = setInterval(setValue, 10);
+  }
 }
 
 function reset() {
