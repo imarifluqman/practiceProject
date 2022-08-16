@@ -16,15 +16,15 @@
     <div class="timerBox">
         <fieldset>
             <legend>Hour</legend>
-            <input id="hour" type="number" placeholder="Enter Hour" max="99" value="00">
+            <input id="hour" type="number" placeholder="00" max="99">
         </fieldset>
         <fieldset>
             <legend>Min</legend>
-            <input id="minute" type="number" placeholder="Enter Minute" max="60" value="00">
+            <input id="minute" type="number" placeholder="00" max="60">
         </fieldset>
         <fieldset>
             <legend>Sec</legend>
-            <input id="sec" type="number" placeholder="Enter Second" max="60" value="00">
+            <input id="sec" type="number" placeholder="00" max="60">
         </fieldset>
     </div>
 
@@ -35,9 +35,20 @@
     </div>
 
     <div class="showTime">
-        <p id="showhour">00</p>
-        <p id="showmin">00</p>
-        <p id="showsec">00</p>
+        <fieldset>
+            <legend>H</legend>
+            <p id="showhour">00</p>
+        </fieldset>
+        <fieldset>
+            <legend>M</legend>
+            <p id="showmin">00</p>
+        </fieldset>
+        <fieldset>
+            <legend>S</legend>
+            <p id="showsec">00</p>
+        </fieldset>
+        <!-- <p id="showmin">00</p>
+        <p id="showsec">00</p> -->
     </div>
 
     <div>

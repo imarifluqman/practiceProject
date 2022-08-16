@@ -40,10 +40,13 @@ h1 {
 fieldset {
   padding: 5px 20px 10px 20px;
   margin: 5px;
+  border-radius: 5px;
 }
 fieldset input {
   width: 90%;
   font-size: 20px;
+  border: none;
+  outline: none;
 }
 .btn button {
   padding: 5px 15px;
@@ -58,16 +61,21 @@ fieldset input {
   justify-content: center;
   align-items: center;
 }
-.showTime p {
+.showTime fieldset {
+  border: none;
   width: 70px;
-  height: 70px;
-  font-weight: 200;
+  height: 80px;
   border-radius: 50%;
-  line-height: 70px;
-  font-size: 25px;
-  margin: 0 5px;
+  font-size: 20px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.showTime fieldset legend {
+  font-size: 20px;
+  font-weight: 400;
+}
+.showTime fieldset p {
+  font-weight: 200;
 }
 #timeOver {
   text-align: center;

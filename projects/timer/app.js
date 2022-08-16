@@ -14,22 +14,19 @@ let showmin = document.querySelector("#showmin");
 let showsec = document.querySelector("#showsec");
 
 function setValue() {
-  if (h != 0 && m != 0 && s != 0) {
-    s--;
-    timeOver.innerHTML = "";
-  } else {
-    clearInterval(interval);
-    start.removeAttribute("disabled");
+  if (h == 0 && m == 0 && s == 0) {
+    reset();
     timeOver.innerHTML = "Time is Over";
-  }
-
-  if (s === 0) {
+  } else if (s != 0) {
+    s--;
+    inputDisabled(false);
+    timeOver.innerHTML = "";
+  } else if (m != 0 && s == 0) {
+    s = 59;
     m--;
-    s = 60;
-  }
-  if (m === 0) {
-    h--;
+  } else if (h != 0 && m == 0) {
     m = 60;
+    h--;
   }
 
   showhour.innerHTML = h;
@@ -41,23 +38,36 @@ function starttimer(e) {
   if (hour.value == 0 && minute.value == 0 && sec.value == 0) {
     clearInterval(interval);
     start.removeAttribute("disabled");
-    timeOver.innerHTML = "Plese set time";
+    timeOver.innerHTML = "Please set time";
   } else {
     e.setAttribute("disabled", "disabled");
     h = hour.value;
     m = minute.value;
     s = sec.value;
-    interval = setInterval(setValue, 10);
+    interval = setInterval(setValue, 1000);
   }
 }
 
 function reset() {
   clearInterval(interval);
   start.removeAttribute("disabled");
-  hour.value = 00;
-  minute.value = 00;
-  sec.value = 00;
+  inputDisabled(true);
+  hour.value = 0;
+  minute.value = 0;
+  sec.value = 0;
   showhour.innerHTML = hour.value;
   showmin.innerHTML = minute.value;
   showsec.innerHTML = sec.value;
+}
+
+function inputDisabled(anable) {
+  if (anable) {
+    hour.removeAttribute("disabled");
+    minute.removeAttribute("disabled");
+    sec.removeAttribute("disabled");
+  } else {
+    hour.setAttribute("disabled", "disabled");
+    minute.setAttribute("disabled", "disabled");
+    sec.setAttribute("disabled", "disabled");
+  }
 }
