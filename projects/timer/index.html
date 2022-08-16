@@ -11,49 +11,51 @@
 
 <body>
     <h1>Timer</h1>
+    <section>
 
-    <p class="selectTime">Select Time</p>
-    <div class="timerBox">
-        <fieldset>
-            <legend>Hour</legend>
-            <input id="hour" type="number" placeholder="00" max="99">
-        </fieldset>
-        <fieldset>
-            <legend>Min</legend>
-            <input id="minute" type="number" placeholder="00" max="60">
-        </fieldset>
-        <fieldset>
-            <legend>Sec</legend>
-            <input id="sec" type="number" placeholder="00" max="60">
-        </fieldset>
-    </div>
+        <p class="selectTime">Select Time</p>
+        <div class="timerBox">
+            <fieldset>
+                <legend>Hour</legend>
+                <input id="hour" type="number" placeholder="00" max="99">
+            </fieldset>
+            <fieldset>
+                <legend>Min</legend>
+                <input id="minute" type="number" placeholder="00" max="60">
+            </fieldset>
+            <fieldset>
+                <legend>Sec</legend>
+                <input id="sec" type="number" placeholder="00" max="60">
+            </fieldset>
+        </div>
 
 
-    <div class="btn">
-        <button id="start" onclick="starttimer(this)">Start</button>
-        <button onclick="reset()">Reset</button>
-    </div>
+        <div class="btn">
+            <button id="start" onclick="starttimer(this)">Start</button>
+            <button onclick="reset()">Reset</button>
+        </div>
 
-    <div class="showTime">
-        <fieldset>
-            <legend>H</legend>
-            <p id="showhour">00</p>
-        </fieldset>
-        <fieldset>
-            <legend>M</legend>
-            <p id="showmin">00</p>
-        </fieldset>
-        <fieldset>
-            <legend>S</legend>
-            <p id="showsec">00</p>
-        </fieldset>
-        <!-- <p id="showmin">00</p>
-        <p id="showsec">00</p> -->
-    </div>
+        <div class="showTime">
+            <fieldset>
+                <legend>H</legend>
+                <p id="showhour">00</p>
+            </fieldset>
+            <fieldset>
+                <legend>M</legend>
+                <p id="showmin">00</p>
+            </fieldset>
+            <fieldset>
+                <legend>S</legend>
+                <p id="showsec">00</p>
+            </fieldset>
 
-    <div>
-        <p id="timeOver"></p>
-    </div>
+        </div>
+
+        <div>
+            <p id="timeOver"></p>
+        </div>
+    </section>
+
 
     <script src="app.js"></script>
 </body>
