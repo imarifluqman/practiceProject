@@ -9,10 +9,7 @@ body {
   width: 100%;
   height: 100vh;
 }
-section {
-  width: 390px;
-  margin: 0 auto;
-}
+
 
 h1 {
   color: yellow;
@@ -82,7 +79,8 @@ fieldset input {
   font-weight: 200;
 }
 #timeOver {
+  width: 300px;
   text-align: center;
-  margin-top: 20px;
+  margin: 20px auto;
   background-color: rgb(245, 246, 246);
 }
