@@ -15,18 +15,24 @@
 <body>
     <header>
         <nav>
-            <h1>TODO</h1>
-            <i class="fa-solid fa-bars"></i>
+            <h1>KEEP NOTE</h1>
+            <i onclick="removeAll()" class="fa-solid fa-trash-arrow-up"></i>
         </nav>
     </header>
-    <section class="inputSection">
-        <div>
-            <input id="todoInput" type="text" placeholder="TODO">
-            <button onclick="addTodo()"><i class="fa-solid fa-plus"></i></button>
-            <button onclick="removeAll()"><i class="fa-solid fa-minus"></i></button>
 
+    <div class="add_btn">
+        <button onclick="openTextBox()"><i class="fa-solid fa-plus"></i></button>
+    </div>
+
+    <div class="form">
+        <textarea id="textinput" placeholder="Type your Note here...!" cols="30" rows="10"></textarea>
+        <div class="btnSet">
+            <button class="add_todo" onclick="addTodo()">Add</button>
+            <button onclick="closeTextBox()">Cancle</button>
         </div>
-    </section>
+
+    </div>
+
     <section id="todoList">
 
     </section>
