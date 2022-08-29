@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,8 @@ header {
   width: 100%;
   background-color: #1f40f9;
   /* position: fixed;
-  top: 0; */
+  top: 0;
+  z-index: 110; */
 }
 header nav {
   display: flex;
@@ -23,6 +25,7 @@ header nav h1 {
   font-size: 20px;
   background-color: white;
   letter-spacing: 5px;
+  font-family: "Poppins", sans-serif;
 }
 header nav i {
   font-size: 18px;
@@ -52,13 +55,14 @@ header nav i:hover {
   border-style: solid;
   border-color: #1f40f9;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 }
 .add_btn i {
   font-size: 30px;
   color: #36187e;
 }
 .form {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -72,6 +76,7 @@ header nav i:hover {
   box-shadow: 2px 4px 15px -1px rgba(0, 0, 0, 0.41);
   z-index: 99;
   display: none;
+  font-family: "Poppins", sans-serif;
 }
 .form .btnSet {
   display: flex;
@@ -84,6 +89,7 @@ header nav i:hover {
   border: none;
   padding: 10px;
   resize: none;
+  font-family: "Poppins", sans-serif;
 }
 .form button {
   width: 80px;
@@ -97,10 +103,12 @@ header nav i:hover {
   display: block;
   cursor: pointer;
   border-radius: 5px;
+  font-family: "Poppins", sans-serif;
 }
 .save_todo {
   display: none;
   background-color: #36187e;
+  font-family: "Poppins", sans-serif;
 }
 
 #todoList {
@@ -125,10 +133,12 @@ header nav i:hover {
   height: 80%;
   padding: 10px;
   overflow-y: scroll;
+  font-family: "Poppins", sans-serif;
 }
 
 .note_text::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
+  /* display: none; */
 }
 
 /* Track */
