@@ -13,10 +13,26 @@ header nav {
   align-items: center;
   padding: 10px 20px;
 }
-header nav h1,
+header nav h1 {
+  font-size: 18px;
+  color: #1f40f9;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: white;
+  letter-spacing: 5px;
+}
 header nav i {
   font-size: 18px;
-  color: #ebeccf;
+  color: #1f40f9;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: white;
+}
+header nav i:hover {
+  border: 1px solid #020936;
 }
 .add_btn {
   position: fixed;
@@ -115,4 +131,14 @@ header nav i {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+}
+.btn_box button {
+  outline: none;
+  border: none;
+  background-color: #1f40f9;
+  padding: 7px;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
