@@ -1,0 +1,20 @@
+.navbar{
+    background-color: #006400 !important;
+}
+a{
+    color: white !important;
+}
+.dropdown-menu a{
+    color: black !important;
+}
+.card-img{
+    height: 155px;
+}
+.banner-img{
+    width: 560px;
+    padding: 10px 0;
+
+}
+ul{
+    list-style: none;
+}
