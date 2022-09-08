@@ -283,10 +283,14 @@ function products() {
     <img src="${data.image}" alt="">
     <p>${data.title}</p>
     <h5>Rs:${data.price}</h5>
-    <a href="detail.html">
-      <button type="button" class="btn btn-default btn-block mt-2">Buy Now</button>
-    </a>
+      <button type="button" onClick="cart(${index})" class="btn btn-default btn-block mt-2">Buy Now</button>
   </div>`;
   });
 }
 products();
+
+let cartItem = [];
+function cart(params) {
+  cartItem.push(productArray[params]);
+  console.log(cartItem);
+}
