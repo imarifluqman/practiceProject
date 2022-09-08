@@ -2,6 +2,11 @@
 //   .then((res) => res.json())
 //   .then((json) => console.log(json));
 
+/* https://github.com/keikaavousi/fake-store-api
+
+API for Ecommerce web site
+*/
+
 let productList = document.querySelector("#productList");
 let productArray = [
   {
