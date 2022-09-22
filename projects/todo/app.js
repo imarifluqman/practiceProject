@@ -3,9 +3,9 @@ const todoList = document.querySelector("#todoList");
 let add_btn = document.querySelector(".add_btn");
 let form = document.querySelector(".form");
 let add_todo = document.querySelector(".add_todo");
-let todoBox = [];
+let indo=localStorage.getItem('todo')
+let todoBox =JSON.parse(indo) || [];
 let todoindex;
-
 function setTime() {
   let time = new Date();
   let date = time.getDate();
@@ -63,6 +63,7 @@ function addTodo() {
         time: setTime(),
       };
       todoBox.push(obj);
+      localStorage.setItem('todo',JSON.stringify(todoBox));
       showInHtml();
       textinput.value = "";
       form.style.display = "none";
@@ -75,6 +76,7 @@ function addTodo() {
 
 function deleteTodo(e) {
   todoBox.splice(e, 1);
+  localStorage.setItem('todo',JSON.stringify(todoBox));
   showInHtml();
 }
 
@@ -91,6 +93,7 @@ function editSave() {
     todo: textinput.value,
     time: setTime(),
   };
+  localStorage.setItem('todo',JSON.stringify(todoBox));
   form.style.display = "none";
   add_btn.style.display = "block";
   textinput.value = "";
@@ -101,5 +104,9 @@ function editSave() {
 
 function removeAll() {
   todoBox = [];
+  localStorage.setItem('todo',JSON.stringify(todoBox));
   showInHtml();
 }
+
+
+showInHtml();
