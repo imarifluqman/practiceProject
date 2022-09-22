@@ -1,11 +1,13 @@
 const textinput = document.querySelector("#textinput");
+const title = document.querySelector("#title");
 const todoList = document.querySelector("#todoList");
 let add_btn = document.querySelector(".add_btn");
 let form = document.querySelector(".form");
 let add_todo = document.querySelector(".add_todo");
-let indo=localStorage.getItem('todo')
-let todoBox =JSON.parse(indo) || [];
+let indo = localStorage.getItem('todo')
+let todoBox = JSON.parse(indo) || [];
 let todoindex;
+
 function setTime() {
   let time = new Date();
   let date = time.getDate();
@@ -23,10 +25,12 @@ function setTime() {
   let timeDate = `${strTime} / ${date}-${month}-${year}`;
   return timeDate;
 }
+
 function openTextBox() {
   form.style.display = "block";
   add_btn.style.display = "none";
 }
+
 function closeTextBox() {
   form.style.display = "none";
   add_btn.style.display = "block";
@@ -38,6 +42,7 @@ function showInHtml() {
   for (let index = 0; index < todoBox.length; index++) {
     todoList.innerHTML += `<div class="itemBox">
     <div class="note_text">
+    <h6>${todoBox[index].title}</h6>
         <p>${todoBox[index].todo}</p>
     </div>
     <div>
@@ -59,11 +64,12 @@ function addTodo() {
       alert("please write something...!");
     } else {
       let obj = {
+        title: title.value,
         todo: textinput.value,
         time: setTime(),
       };
       todoBox.push(obj);
-      localStorage.setItem('todo',JSON.stringify(todoBox));
+      localStorage.setItem('todo', JSON.stringify(todoBox));
       showInHtml();
       textinput.value = "";
       form.style.display = "none";
@@ -76,7 +82,7 @@ function addTodo() {
 
 function deleteTodo(e) {
   todoBox.splice(e, 1);
-  localStorage.setItem('todo',JSON.stringify(todoBox));
+  localStorage.setItem('todo', JSON.stringify(todoBox));
   showInHtml();
 }
 
@@ -90,10 +96,11 @@ function editTodo(e) {
 
 function editSave() {
   todoBox[todoindex] = {
+    title: title.value,
     todo: textinput.value,
     time: setTime(),
   };
-  localStorage.setItem('todo',JSON.stringify(todoBox));
+  localStorage.setItem('todo', JSON.stringify(todoBox));
   form.style.display = "none";
   add_btn.style.display = "block";
   textinput.value = "";
@@ -104,7 +111,7 @@ function editSave() {
 
 function removeAll() {
   todoBox = [];
-  localStorage.setItem('todo',JSON.stringify(todoBox));
+  localStorage.setItem('todo', JSON.stringify(todoBox));
   showInHtml();
 }
 
