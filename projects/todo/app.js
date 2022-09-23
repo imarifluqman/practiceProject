@@ -71,6 +71,7 @@ function addTodo() {
       todoBox.push(obj);
       localStorage.setItem('todo', JSON.stringify(todoBox));
       showInHtml();
+      title.value = '';
       textinput.value = "";
       form.style.display = "none";
       add_btn.style.display = "block";
@@ -90,6 +91,7 @@ function editTodo(e) {
   form.style.display = "block";
   add_btn.style.display = "none";
   textinput.value = todoBox[e].todo;
+  title.value=todoBox[e].title;
   todoindex = e;
   add_todo.innerHTML = "Save";
 }
@@ -103,6 +105,7 @@ function editSave() {
   localStorage.setItem('todo', JSON.stringify(todoBox));
   form.style.display = "none";
   add_btn.style.display = "block";
+  title.value = '';
   textinput.value = "";
   add_todo.innerHTML = "Add";
 
