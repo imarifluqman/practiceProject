@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 header {
   width: 100%;
   background-color: #1f40f9;
@@ -11,12 +13,14 @@ header {
   top: 0;
   z-index: 110; */
 }
+
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
 }
+
 header nav h1 {
   font-size: 18px;
   color: #1f40f9;
@@ -27,6 +31,7 @@ header nav h1 {
   letter-spacing: 5px;
   font-family: "Poppins", sans-serif;
 }
+
 header nav i {
   font-size: 18px;
   color: #1f40f9;
@@ -36,9 +41,11 @@ header nav i {
   font-size: 20px;
   background-color: white;
 }
+
 header nav i:hover {
   border: 1px solid #020936;
 }
+
 .add_btn {
   position: fixed;
   top: 90%;
@@ -46,6 +53,7 @@ header nav i:hover {
   transform: translate(-50%, -50%);
   z-index: 100;
 }
+
 .add_btn button {
   outline: none;
   height: 50px;
@@ -57,10 +65,12 @@ header nav i:hover {
   cursor: pointer;
   font-family: "Poppins", sans-serif;
 }
+
 .add_btn i {
   font-size: 30px;
   color: #36187e;
 }
+
 .form {
   position: fixed;
   top: 50%;
@@ -77,20 +87,32 @@ header nav i:hover {
   z-index: 99;
   display: none;
   font-family: "Poppins", sans-serif;
+  transition: 0.3s ease-in-out;
 }
+
+.form #title {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  margin-bottom: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
 .form .btnSet {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .form textarea {
   width: 100%;
-  height: 85%;
+  height: 75%;
   border: none;
   padding: 10px;
   resize: none;
   font-family: "Poppins", sans-serif;
 }
+
 .form button {
   width: 80px;
   height: 40px;
@@ -105,6 +127,7 @@ header nav i:hover {
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
 }
+
 .save_todo {
   display: none;
   background-color: #36187e;
@@ -119,38 +142,55 @@ header nav i:hover {
   align-items: center;
   gap: 10px;
 }
+
 .itemBox {
+  overflow: hidden;
   position: relative;
   width: 300px;
   height: 300px;
-  border-radius: 10px;
+  border-radius: 5px;
   -webkit-box-shadow: 2px 4px 15px -1px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 2px 4px 15px -1px rgba(0, 0, 0, 0.41);
   box-shadow: 2px 4px 15px -1px rgba(0, 0, 0, 0.41);
+
 }
+
 .note_text {
   width: 100%;
   height: 80%;
-  padding: 10px;
-  overflow-y: scroll;
   font-family: "Poppins", sans-serif;
 }
 
-.note_text::-webkit-scrollbar {
-  width: 5px;
+.note_text p {
+  height: 85%;
+  padding: 10px;
+  overflow-y: scroll;
+ 
+}
+
+.note_text h6 {
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.note_text p::-webkit-scrollbar {
+  width: 2px;
 }
 
 /* Track */
-.note_text::-webkit-scrollbar-track {
+.note_text p::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 5px;
 }
 
 /* Handle */
-.note_text::-webkit-scrollbar-thumb {
+.note_text p::-webkit-scrollbar-thumb {
   background: #1f40f9;
   border-radius: 5px;
 }
+
 .btn_box {
   width: 100%;
   border-top: 1px solid black;
@@ -161,6 +201,7 @@ header nav i:hover {
   align-items: center;
   padding: 10px;
 }
+
 .btn_box button {
   outline: none;
   border: none;
