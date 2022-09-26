@@ -60,8 +60,8 @@ function showInHtml() {
 
 function addTodo() {
   if (add_todo.innerHTML == "Add") {
-    if (textinput.value == "") {
-      alert("please write something...!");
+    if (textinput.value == "" || title.value == "") {
+      alert("please fill the title / description...!");
     } else {
       let obj = {
         title: title.value,
@@ -91,7 +91,7 @@ function editTodo(e) {
   form.style.display = "block";
   add_btn.style.display = "none";
   textinput.value = todoBox[e].todo;
-  title.value=todoBox[e].title;
+  title.value = todoBox[e].title;
   todoindex = e;
   add_todo.innerHTML = "Save";
 }
