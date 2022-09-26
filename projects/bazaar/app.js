@@ -8,6 +8,7 @@ API for Ecommerce web site
 */
 
 let productList = document.querySelector("#productList");
+let cartItem = [];
 let productArray = [
   {
     id: 1,
@@ -281,7 +282,7 @@ function products() {
   productArray.map((data, index) => {
     productList.innerHTML += ` <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 img">
     <img src="${data.image}" alt="">
-    <p>${data.title}</p>
+    <p>${data.title.slice(0, 20)}</p>
     <h5>Rs:${data.price}</h5>
       <button type="button" onClick="cart(${index})" class="btn btn-default btn-block mt-2">Buy Now</button>
   </div>`;
@@ -289,8 +290,12 @@ function products() {
 }
 products();
 
-let cartItem = [];
 function cart(params) {
   cartItem.push(productArray[params]);
   console.log(cartItem);
 }
+
+let footer = document.getElementById("footer");
+let date = new Date().getFullYear();
+footer.innerHTML = `© ${date} onlinebazaar.com`;
+console.log(date);
