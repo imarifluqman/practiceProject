@@ -164,6 +164,7 @@ header nav i:hover {
   height: 85%;
   padding: 10px;
   overflow-y: scroll;
+  background: Red ;
 }
 
 .note_text h6 {
