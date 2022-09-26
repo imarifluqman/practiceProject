@@ -161,7 +161,7 @@ header nav i:hover {
 }
 
 .note_text p {
-  height: 91%;
+  height: 85%;
   padding: 10px;
   overflow-y: scroll;
 }
